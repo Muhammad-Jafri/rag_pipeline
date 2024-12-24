@@ -23,21 +23,29 @@ Ensure all required Python packages are installed:
 pip install -r requirements.txt
 ```
 
-### 3. Start the Vector Store
+### 3. Create env file
+
+```bash
+cp .env.example .env
+```
+
+add your OPENAI_API_key
+
+### 4. Start the Vector Store
 The project uses Qdrant as the vector store. Start it using Docker Compose:
 
 ```bash
 docker-compose up qdrant-db -d
 ```
 
-### 4. Load Data
+### 5. Load Data
 Prepare the data for the application by running the data loading script:
 
 ```bash
 python3 data_loading.py
 ```
 
-### 5. Run the Application
+### 6. Run the Application
 You can choose to run either the testing script or the server:
 
 #### Run the Testing Script
